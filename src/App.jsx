@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import ApplyBtn from './components/ApplyBtn'
+import HeroSection from './components/HeroSection'
 import './App.css'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <ApplyBtn />
+      <HeroSection />
     </>
   );
 }
