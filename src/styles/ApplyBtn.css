@@ -1,0 +1,16 @@
+.apply-btn {
+    width: 18vw;
+    height: 7vh;
+    background-color: #3D9FFF;
+    border-style: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.apply-btn:hover {
+    background-color: #66b2fe;
+
+}
