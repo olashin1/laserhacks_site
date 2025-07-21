@@ -7,13 +7,16 @@
  */
 
 import '../styles/ApplyBtn.css'
+import EnterAnimation from './EnterAnimation';
 
 export default function ApplyBtn() {
     return (
         <>
-            <button onClick={redirectToApply} className='apply-btn'>
-                Apply Now
-            </button >
+            <EnterAnimation>
+                <button onClick={redirectToApply} className='apply-btn'>
+                    Apply Now
+                </button >
+            </EnterAnimation>
         </>
     )
 }
