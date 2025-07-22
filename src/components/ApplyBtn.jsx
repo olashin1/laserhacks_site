@@ -8,14 +8,17 @@
 
 import '../styles/ApplyBtn.css'
 import EnterAnimation from './EnterAnimation';
+import Gestures from './Gestures';
 
 export default function ApplyBtn() {
     return (
         <>
             <EnterAnimation>
-                <button onClick={redirectToApply} className='apply-btn'>
-                    Apply Now
-                </button >
+                <Gestures>
+                    <button onClick={redirectToApply} className='apply-btn'>
+                        Register Now
+                    </button >
+                </Gestures>
             </EnterAnimation>
         </>
     )

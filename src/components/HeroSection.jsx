@@ -19,10 +19,13 @@ export default function HeroSection() {
         <>
 
             <div className="hero-container">
-                <h1 className="tone-words">Code. Collaborate. Create.</h1>
+                <h1 className='header'>LaserHacks</h1>
+                <h2 className="tone-words">Code. Collaborate. Create.</h2>
                 <p className="description">{description}</p>
+                <div className='apply-btn'>
+                    <ApplyBtn />
+                </div>
             </div>
-            <ApplyBtn />
         </>
     )
 }

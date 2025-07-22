@@ -1,0 +1,8 @@
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 24px;
+    /* or whatever spacing you want */
+    justify-content: center;
+    margin-top: 300px;
+}
