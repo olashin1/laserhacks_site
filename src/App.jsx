@@ -1,13 +1,16 @@
-import HeroSection from './components/HeroSection'
-import Gallery from './components/Gallery'
-import FaqSection from './components/FaqSection'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import './App.css'
+
 
 function App() {
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
