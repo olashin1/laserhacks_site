@@ -9,7 +9,6 @@
     cursor: pointer;
     transition: 0.15s;
 
-    /* Add these for proper centering */
     display: flex;
     justify-content: center;
     align-items: center;

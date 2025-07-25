@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import ApplyBtn from './components/ApplyBtn'
 import HeroSection from './components/HeroSection'
 import Gallery from './components/Gallery'
+import Accordion from './components/Accordion'
+import FaqSection from './components/FaqSection'
 import './App.css'
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     <>
       <HeroSection />
       <Gallery />
+      <FaqSection />
     </>
   );
 }
