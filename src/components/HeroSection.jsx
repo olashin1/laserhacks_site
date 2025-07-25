@@ -7,7 +7,6 @@
 
 import '../styles/HeroSection.css'
 import ApplyBtn from '../components/ApplyBtn'
-import EnterAnimation from './EnterAnimation';
 
 // GPT generated description
 const description = `Join us for LaserHacks, Irvine Valley College's annual hackathon where students come together
@@ -19,8 +18,9 @@ export default function HeroSection() {
         <>
 
             <div className="hero-container">
-                <h1 className='header'>LaserHacks</h1>
+                <h1 className='header'>LaserHacks 2026 @ IVC</h1>
                 <h2 className="tone-words">Code. Collaborate. Create.</h2>
+                <p className='about-header'>About the Hackathon</p>
                 <p className="description">{description}</p>
                 <div className='apply-btn'>
                     <ApplyBtn />
