@@ -1,3 +1,8 @@
+/**
+ * This is an animation for the buttons, just enclose a
+ * button component in this animation to animate it
+ */
+
 import { motion } from "framer-motion";
 
 export default function EnterAnimation({ children }) {
