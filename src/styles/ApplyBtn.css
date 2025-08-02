@@ -1,17 +1,17 @@
 .apply-btn {
-    width: 18vw;
-    height: 7vh;
-    background-color: #3D9FFF;
-    border-style: none;
-    font-size: 100%;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.15s;
+  width: 18vw;
+  height: 7vh;
+  background-color: #3d9fff;
+  border-style: none;
+  font-size: 100%;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.15s;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    text-align: center;
+  text-align: center;
 }

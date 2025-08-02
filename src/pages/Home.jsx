@@ -13,12 +13,12 @@ import Gallery from "../components/Gallery";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
-    return (
-        <>
-            <NavBar />
-            <HeroSection />
-            <Gallery />
-            <FaqSection />
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+      <HeroSection />
+      <Gallery />
+      <FaqSection />
+    </>
+  );
 }

@@ -1,30 +1,26 @@
 .accordion-container {
-    width: 50vw;
-    border-radius: 10px;
-    background-color: #1b2834;
-    margin-top: 20px;
-    cursor: pointer;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+  width: 50vw;
+  border-radius: 10px;
+  background-color: #1b2834;
+  margin-top: 20px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .question {
-    display: inline-block;
-}
-
-
-.plus-minus {
-    display: inline;
-}
-
-.question {
-    font-weight: 700;
-    width: 95%;
+  display: inline-block;
+  font-weight: 700;
+  width: 95%;
 }
 
 .plus-minus {
-    text-align: right;
-    width: 100%;
+  display: inline;
+}
+
+.plus-minus {
+  text-align: right;
+  width: 100%;
 }

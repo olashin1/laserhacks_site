@@ -3,12 +3,12 @@
  * information about the hackathon
  */
 
-import NavBar from "../components/NavBar"
+import NavBar from "../components/NavBar";
 
 export default function AboutUs() {
-    return (
-        <>
-            <NavBar />
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+    </>
+  );
 }
