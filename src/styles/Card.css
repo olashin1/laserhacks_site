@@ -1,6 +1,8 @@
 .photo-container {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps it square while scaling */
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .photo {
@@ -8,4 +10,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 30px;
+  transition: 0.15s;
+}
+
+.photo:hover {
+  box-shadow: 0 0 3px black;
+  margin-top: -10px;
 }
