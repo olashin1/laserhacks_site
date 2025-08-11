@@ -1,8 +1,6 @@
 .photo-container {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Keeps it square while scaling */
-  max-width: 250px;
-  margin: 0 auto;
+  width: 500px;
+  height: 500px;
 }
 
 .photo {

@@ -1,11 +1,10 @@
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 500px);
+  /* 2 columns */
+  gap: 48px;
+  justify-content: center;
   margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
-  justify-items: center; /* Centers cards in grid */
 }
 
 /* Optional: further tweak spacing on very small screens */
@@ -16,7 +15,7 @@
 }
 
 .gallery-title {
+  font-size: 35px;
   text-align: center;
   text-decoration: underline;
-  margin-top: 50px;
 }
