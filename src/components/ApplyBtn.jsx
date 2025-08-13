@@ -25,5 +25,7 @@ export default function ApplyBtn() {
 }
 
 function redirectToApply() {
-  window.open("https://google.com");
+  window.open(
+    "https://docs.google.com/forms/d/160TO4VB5xHfN7NdmQ0JXCu7aarJbvug6kZrgCBnNBzw/viewform?edit_requested=true&pli=1"
+  );
 }

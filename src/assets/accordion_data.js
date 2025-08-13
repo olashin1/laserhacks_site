@@ -1,3 +1,5 @@
+// TODO: Change the FAQ to fit the questions for our hackathon as this is a sample from GPT
+
 const accordion_data = [
   {
     question: "What is a hackathon?",
