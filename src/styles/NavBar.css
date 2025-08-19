@@ -1,5 +1,7 @@
 .navbar-container {
   background-color: #1a1f2b;
+  position: sticky;
+  top: 0;
 }
 
 .nav-btn {
