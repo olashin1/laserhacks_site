@@ -3,6 +3,8 @@
  * props to be passed in to display a question,
  * and on click an answer. It can open and close
  * it's window.
+ *
+ * TODO: Change the accordion from a div to a button and use a state
  */
 import { useState } from "react";
 import "../styles/Accordion.css";

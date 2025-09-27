@@ -2,23 +2,42 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-  /* 2 columns */
   gap: 48px;
   justify-content: center;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px;
+
+  /* Aero: subtle floating panels */
+  background: linear-gradient(
+    145deg,
+    rgba(232, 247, 255, 0.6),
+    rgba(200, 247, 220, 0.45)
+  );
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 36px rgba(20, 70, 120, 0.18);
 }
 
 /* Optional: further tweak spacing on very small screens */
 @media (max-width: 400px) {
   .gallery-grid {
     gap: 16px;
+    margin: 20px;
+    padding: 20px;
   }
 }
 
 .gallery-title {
-  font-size: 35px;
+  font-size: 38px;
   text-align: center;
-  text-decoration: underline;
+
+  /* Aero-style gradient text instead of underline */
+  font-weight: 700;
+  background: linear-gradient(90deg, #00a8ff, #00e7a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }

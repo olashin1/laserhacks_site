@@ -1,11 +1,26 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Font system */
+  font-family: "Segoe UI", "Avenir", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
+  /* Aero palette */
+  --aero-text: #0e2433;
+  --aero-muted: #406080;
+  --aero-bg: #eef9ff;
+  --aero-bg-dark: #101820;
+
+  --aero-surface: rgba(255, 255, 255, 0.65);
+  --aero-surface-strong: rgba(255, 255, 255, 0.8);
+
+  --aero-accent: #00a8ff; /* sky blue */
+  --aero-accent-2: #00e7a7; /* mint green */
+
+  --aero-shadow: 0 8px 28px rgba(20, 70, 120, 0.18);
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #101820;
+  color: var(--aero-text);
+  background: var(--aero-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,14 +28,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  background-color: #101820;
+
+  /* Aero background: subtle gradient sky → mint */
+  background: linear-gradient(135deg, #dff6ff, #bde0fe 50%, #c8f7dc 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: var(--aero-text);
 }

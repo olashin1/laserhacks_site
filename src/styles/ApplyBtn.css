@@ -1,17 +1,48 @@
 .apply-btn {
   width: 18vw;
   height: 7vh;
-  background-color: #3d9fff;
-  border-style: none;
-  font-size: 100%;
-  font-weight: 700;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.15s;
 
+  /* Aero gradient pill */
+  background: linear-gradient(135deg, #00a8ff, #00e7a7);
+  border: none;
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
+
+  /* Depth + gloss */
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.6),
+    0 8px 24px rgba(0, 168, 255, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* Hover: lift + brighter gradient */
+.apply-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(135deg, #00c2ff, #00f5b5);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    0 12px 32px rgba(0, 168, 255, 0.35);
+}
+
+/* Active: pressed pill */
+.apply-btn:active {
+  transform: translateY(0) scale(0.98);
+  background: linear-gradient(135deg, #0090e0, #00c490);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
+    0 6px 18px rgba(0, 168, 255, 0.2);
+}
+
+/* Focus-visible: glowing ring */
+.apply-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 168, 255, 0.35),
+    0 8px 24px rgba(0, 168, 255, 0.25);
 }
