@@ -21,7 +21,7 @@
 .description {
   margin-bottom: 90px;
   font-size: 1.1rem;
-  color: #1c3d5a;
+  color: #0b0d0e;
   line-height: 1.7rem;
 
   /* Glassy effect */
@@ -41,4 +41,9 @@
   -webkit-text-fill-color: transparent;
 
   letter-spacing: 1px;
+}
+
+.hackathon-logo {
+  width: 150px;
+  height: 150px;
 }

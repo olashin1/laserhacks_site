@@ -17,6 +17,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="hero-container">
+        <img className="hackathon-logo" src="/public/LH_AeroBlue.png" />
         <h1 className="header">LaserHacks 2026 @ IVC</h1>
         <h2 className="tone-words">Code. Collaborate. Create.</h2>
         <p className="about-header">About the Hackathon</p>
