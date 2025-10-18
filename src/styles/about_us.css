@@ -59,10 +59,7 @@
     linear-gradient(180deg, #f7fbff, #ffffff);
 }
 
-/*
- * Base
- * --------------------------------------------------
- */
+/* Base */
 .au-page {
   min-height: 100vh;
   width: 100%;
@@ -76,10 +73,7 @@
   padding: 32px;
 }
 
-/*
- * Hero
- * --------------------------------------------------
- */
+/* Hero */
 .au-hero {
   position: relative;
   overflow: hidden;
@@ -90,6 +84,19 @@
   backdrop-filter: var(--blur-strong);
   -webkit-backdrop-filter: var(--blur-strong);
   box-shadow: var(--shadow-main);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hackathon-logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 24px;
+  display: block;
 }
 
 .au-title {
@@ -111,10 +118,7 @@
   color: var(--slate-700);
 }
 
-/*
- * Chips
- * --------------------------------------------------
- */
+/* Chips */
 .au-chips {
   display: flex;
   flex-wrap: wrap;
@@ -162,10 +166,7 @@
   border: 1px solid var(--indigo-100);
 }
 
-/*
- * Cards & Grid
- * --------------------------------------------------
- */
+/* Cards & Grid */
 .au-grid {
   display: grid;
   gap: 24px;
@@ -216,10 +217,7 @@
   color: var(--slate-700);
 }
 
-/*
- * Lists
- * --------------------------------------------------
- */
+/* Lists */
 .au-list {
   display: grid;
   gap: 10px;
@@ -251,10 +249,7 @@
   background: #22d3ee;
 }
 
-/*
- * Badges
- * --------------------------------------------------
- */
+/* Badges */
 .au-badges {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -281,10 +276,7 @@
   color: #0369a1;
 }
 
-/*
- * CTAs / Buttons
- * --------------------------------------------------
- */
+/* CTAs / Buttons */
 .au-cta {
   display: flex;
   flex-wrap: wrap;
@@ -318,10 +310,7 @@
   border: 1px solid rgba(14, 165, 233, 0.35);
 }
 
-/*
- * Sections & Footer
- * --------------------------------------------------
- */
+/* Sections & Footer */
 .au-section {
   padding: 40px 0;
 }
@@ -332,20 +321,25 @@
   color: #475569;
 }
 
-/*
- * Responsive tweaks
- * --------------------------------------------------
- */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .au-container {
     padding: 20px;
   }
+
   .au-hero {
     padding: 28px;
   }
+
+  .hackathon-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
   .au-title {
     font-size: 32px;
   }
+
   .au-lead {
     font-size: 16px;
   }

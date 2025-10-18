@@ -8,6 +8,8 @@ export default function SponsorUs() {
       <main className="su-page">
         <div className="su-container">
           <section className="su-hero">
+            <img className="hackathon-logo" src="/public/LH_AeroBlue.png" />
+
             <h1 className="su-title">Sponsor LaserHacks</h1>
             <p className="su-lead">
               Help empower the next generation of innovators at Irvine Valley

@@ -8,6 +8,7 @@ export default function AboutUs() {
       <main className="au-page">
         <div className="au-container">
           <section className="au-hero">
+            <img className="hackathon-logo" src="/public/LH_AeroBlue.png" />
             <h1 className="au-title">About LaserHacks</h1>
             <p className="au-lead">
               Join us for LaserHacks, Irvine Valley College's annual hackathon
@@ -152,10 +153,10 @@ export default function AboutUs() {
                 the space, mentors, and energy.
               </p>
               <div className="au-cta" style={{ justifyContent: "center" }}>
-                <a href="#apply" className="au-btn primary">
+                <a href="/" className="au-btn primary">
                   Apply
                 </a>
-                <a href="#sponsors" className="au-btn ghost">
+                <a href="sponsor-us" className="au-btn ghost">
                   Become a Sponsor
                 </a>
               </div>
