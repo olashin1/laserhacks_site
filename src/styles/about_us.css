@@ -1,0 +1,352 @@
+:root {
+  /* Color tokens */
+  --sky-50: #e0f2fe;
+  --sky-100: #bae6fd;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+
+  --emerald-50: #d1fae5;
+  --emerald-100: #a7f3d0;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+
+  --cyan-50: #cffafe;
+  --cyan-100: #a5f3fc;
+  --cyan-600: #0891b2;
+  --cyan-700: #0e7490;
+
+  --teal-50: #ccfbf1;
+  --teal-100: #99f6e4;
+  --teal-700: #115e59;
+
+  --indigo-50: #e0e7ff;
+  --indigo-100: #c7d2fe;
+  --indigo-700: #3730a3;
+
+  --slate-800: #0f172a;
+  --slate-700: #334155;
+  --slate-500: #64748b;
+
+  /* FX tokens */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-ring: rgba(255, 255, 255, 0.6);
+  --glass-card-top: rgba(255, 255, 255, 0.72);
+  --glass-card-bottom: rgba(255, 255, 255, 0.5);
+  --shadow-main: 0 20px 80px -20px rgba(30, 100, 150, 0.25);
+  --shadow-card: 0 16px 60px -20px rgba(30, 100, 150, 0.25);
+  --blur-strong: blur(16px) saturate(160%);
+  --blur-card: blur(14px) saturate(150%);
+
+  /* Layout tokens */
+  --container-max: 1200px;
+  --radius-hero: 28px;
+  --radius-card: 24px;
+  --radius-badge: 18px;
+  --radius-pill: 999px;
+
+  /* Gradients */
+  --brand-gradient: linear-gradient(90deg, #0ea5e9, #22d3a3);
+  --page-gradient: radial-gradient(
+      1200px 600px at -10% -10%,
+      rgba(0, 232, 255, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      900px 500px at 110% 10%,
+      rgba(0, 255, 170, 0.14),
+      transparent
+    ),
+    linear-gradient(180deg, #f7fbff, #ffffff);
+}
+
+/*
+ * Base
+ * --------------------------------------------------
+ */
+.au-page {
+  min-height: 100vh;
+  width: 100%;
+  color: var(--slate-800);
+  background: var(--page-gradient);
+}
+
+.au-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/*
+ * Hero
+ * --------------------------------------------------
+ */
+.au-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 48px;
+  border: 1px solid var(--glass-ring);
+  border-radius: var(--radius-hero);
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-strong);
+  -webkit-backdrop-filter: var(--blur-strong);
+  box-shadow: var(--shadow-main);
+}
+
+.au-title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.au-lead {
+  max-width: 860px;
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--slate-700);
+}
+
+/*
+ * Chips
+ * --------------------------------------------------
+ */
+.au-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.au-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.au-chip.sky {
+  color: var(--sky-700);
+  background: var(--sky-50);
+  border: 1px solid var(--sky-100);
+}
+
+.au-chip.emerald {
+  color: var(--emerald-700);
+  background: var(--emerald-50);
+  border: 1px solid var(--emerald-100);
+}
+
+.au-chip.cyan {
+  color: var(--cyan-700);
+  background: var(--cyan-50);
+  border: 1px solid var(--cyan-100);
+}
+
+.au-chip.teal {
+  color: var(--teal-700);
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+}
+
+.au-chip.indigo {
+  color: var(--indigo-700);
+  background: var(--indigo-50);
+  border: 1px solid var(--indigo-100);
+}
+
+/*
+ * Cards & Grid
+ * --------------------------------------------------
+ */
+.au-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .au-grid.cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .au-grid.cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.au-card {
+  padding: 28px;
+  border: 1px solid var(--glass-ring);
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    180deg,
+    var(--glass-card-top),
+    var(--glass-card-bottom)
+  );
+  backdrop-filter: var(--blur-card);
+  -webkit-backdrop-filter: var(--blur-card);
+  box-shadow: var(--shadow-card);
+}
+
+.au-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.au-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--slate-800);
+}
+
+.au-card p {
+  margin-top: 12px;
+  line-height: 1.7;
+  color: var(--slate-700);
+}
+
+/*
+ * Lists
+ * --------------------------------------------------
+ */
+.au-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  color: var(--slate-700);
+}
+
+.au-dot {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.au-dot i {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 50%;
+}
+
+.sky-dot {
+  background: #38bdf8;
+}
+.emerald-dot {
+  background: #34d399;
+}
+.cyan-dot {
+  background: #22d3ee;
+}
+
+/*
+ * Badges
+ * --------------------------------------------------
+ */
+.au-badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.au-badge {
+  padding: 16px;
+  text-align: center;
+  border-radius: var(--radius-badge);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.au-badge .num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--sky-600);
+}
+
+.au-badge .lbl {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0369a1;
+}
+
+/*
+ * CTAs / Buttons
+ * --------------------------------------------------
+ */
+.au-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.au-btn {
+  border: none;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+
+.au-btn.primary {
+  color: #ffffff;
+  background: var(--brand-gradient);
+  box-shadow: 0 10px 24px rgba(34, 211, 161, 0.25);
+}
+
+.au-btn.primary:hover {
+  transform: translateY(-1px);
+}
+
+.au-btn.ghost {
+  color: #0ea5e9;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+}
+
+/*
+ * Sections & Footer
+ * --------------------------------------------------
+ */
+.au-section {
+  padding: 40px 0;
+}
+
+.au-footer {
+  padding: 40px 0;
+  text-align: center;
+  color: #475569;
+}
+
+/*
+ * Responsive tweaks
+ * --------------------------------------------------
+ */
+@media (max-width: 600px) {
+  .au-container {
+    padding: 20px;
+  }
+  .au-hero {
+    padding: 28px;
+  }
+  .au-title {
+    font-size: 32px;
+  }
+  .au-lead {
+    font-size: 16px;
+  }
+}
