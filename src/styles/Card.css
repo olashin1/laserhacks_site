@@ -1,6 +1,9 @@
 .photo-container {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: 420px;
+  max-height: 260px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,12 +16,11 @@
   object-fit: cover;
   border-radius: 28px;
 
-  /* Aero sheen + smooth lift */
   box-shadow: 0 8px 28px rgba(20, 70, 120, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover: floating glassy glow */
+/* Hover lift */
 .photo:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 36px rgba(0, 168, 255, 0.3),

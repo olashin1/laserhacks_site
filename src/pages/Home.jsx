@@ -11,6 +11,7 @@ import HeroSection from "../components/HeroSection";
 import FaqSection from "../components/FaqSection";
 import Gallery from "../components/Gallery";
 import NavBar from "../components/NavBar";
+import JudgeCTA from "../components/JudgeCTA";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       <Gallery />
+      <JudgeCTA />
       <FaqSection />
     </>
   );

@@ -1,12 +1,21 @@
-/* !: DO NOT CHANGE: Dynamic Gallery View CSS */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-  gap: 48px;
-  justify-content: center;
-  margin: 50px;
+.gallery-title {
+  font-size: 38px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00a8ff, #00e7a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
 
-  /* Aero: subtle floating panels */
+/* shell with your Frutiger Aero glass panel */
+.carousel-shell.ambient {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding: 32px;
+  border-radius: 24px;
+
   background: linear-gradient(
     145deg,
     rgba(232, 247, 255, 0.6),
@@ -14,30 +23,72 @@
   );
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border-radius: 24px;
-  padding: 32px;
   box-shadow: 0 12px 36px rgba(20, 70, 120, 0.18);
+
+  position: relative;
+  overflow: hidden;
 }
 
-/* Optional: further tweak spacing on very small screens */
-@media (max-width: 400px) {
-  .gallery-grid {
-    gap: 16px;
-    margin: 20px;
-    padding: 20px;
+/* viewport that hides overflow */
+.ambient-window {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* the long scrolling strip */
+.ambient-track {
+  display: flex;
+  gap: 24px;
+  /* Prevent images from wrapping */
+  white-space: nowrap;
+
+  /* Smooth infinite scroll */
+  animation: scroll-track 18s linear infinite;
+}
+
+/*
+  One "cycle" of the animation will move the track left
+  by 50% of its total length, because we duplicated the images.
+  That way when the first half has scrolled out of view,
+  the second half is in the same order and it seamlessly loops.
+*/
+@keyframes scroll-track {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-.gallery-title {
-  font-size: 38px;
-  text-align: center;
+/* each slide/card wrapper so spacing is consistent */
+.ambient-slide {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* let’s keep slides somewhat consistent size so the scroll feels stable */
+  width: 420px;
+}
 
-  /* Aero-style gradient text instead of underline */
-  font-weight: 700;
-  background: linear-gradient(90deg, #00a8ff, #00e7a7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Hover-to-pause (nice UX on desktop, optional) */
+.carousel-shell.ambient:hover .ambient-track {
+  animation-play-state: paused;
+}
 
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
+/* responsive tweaks */
+@media (max-width: 480px) {
+  .carousel-shell.ambient {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .ambient-slide {
+    width: 240px;
+  }
+
+  .ambient-window {
+    border-radius: 16px;
+  }
 }

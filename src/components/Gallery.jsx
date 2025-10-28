@@ -1,8 +1,3 @@
-/**
- * The galley will display a photo
- * album of the previous year's event
- */
-
 import Card from "./Card";
 import "../styles/Gallery.css";
 
@@ -14,13 +9,25 @@ export default function Gallery() {
     "/gallery/IMG_4.png",
     "/gallery/IMG_5.png",
     "/gallery/IMG_6.png",
-  ]
-  const cards = images.map((imgPath, idx) => <Card key={idx} path={imgPath} />);
+  ];
+
+  // we duplicate the list so the animation can wrap with no jump
+  const loopImages = [...images, ...images];
+
   return (
     <>
       <h3 className="gallery-title">Highlights from Last Year</h3>
-      <div className="gallery-grid">
-        {cards}
+
+      <div className="carousel-shell ambient">
+        <div className="ambient-window">
+          <div className="ambient-track">
+            {loopImages.map((imgPath, idx) => (
+              <div className="ambient-slide" key={idx}>
+                <Card path={imgPath} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

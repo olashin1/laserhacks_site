@@ -103,17 +103,14 @@ export default function AboutUs() {
                 </div>
                 <div className="au-badges">
                   <div className="au-badge">
-                    <div className="num">#+</div>
+                    <div className="num">60+</div>
                     <div className="lbl">Participants</div>
                   </div>
                   <div className="au-badge">
-                    <div className="num"># hrs</div>
+                    <div className="num">36 hrs</div>
                     <div className="lbl">Hacking</div>
                   </div>
-                  <div className="au-badge">
-                    <div className="num">#+</div>
-                    <div className="lbl">Mentors</div>
-                  </div>
+
                   <div className="au-badge">
                     <div className="num">30+</div>
                     <div className="lbl">Projects</div>

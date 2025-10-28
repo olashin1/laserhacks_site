@@ -6,12 +6,10 @@
 
 import "../styles/Card.css";
 
-export default function Card(prop) {
+export default function Card({ path }) {
   return (
-    <>
-      <div className="photo-container">
-        <img className="photo" src={prop.path} alt="Photo" />
-      </div>
-    </>
+    <div className="photo-container">
+      <img className="photo" src={path} alt="Photo from last year's event" />
+    </div>
   );
 }
